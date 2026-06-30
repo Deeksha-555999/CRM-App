@@ -1,0 +1,5 @@
+{"level":"info","message":"Starting CRM Backend Application...","service":"crm-backend","timestamp":"2026-06-30 10:51:02.768"}
+{"level":"info","message":"Initializing database...","service":"crm-backend","timestamp":"2026-06-30 10:51:02.771"}
+{"level":"info","message":" CRM Backend server started on http://localhost:3000","service":"crm-backend","timestamp":"2026-06-30 10:51:02.837"}
+{"level":"info","message":" Environment: development","service":"crm-backend","timestamp":"2026-06-30 10:51:02.837"}
+{"level":"info","message":" API Documentation: http://localhost:3000/health","service":"crm-backend","timestamp":"2026-06-30 10:51:02.838"}
