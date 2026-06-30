@@ -9,7 +9,7 @@ class LeadService {
         created_by: userId
       });
 
-      return { leadId };
+      return { leadId, id: leadId };
     } catch (error) {
       throw error;
     }

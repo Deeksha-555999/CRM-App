@@ -4,15 +4,13 @@ const { nameSchema, emailSchema, phoneSchema } = require('../../../validators/jo
 const createCustomerValidation = Joi.object({
   name: nameSchema,
   email: emailSchema,
-  phone: Joi.string().trim().max(50).optional().allow('').messages({
-    'string.max': 'Phone number must not exceed 50 characters'
-  }),
+  phone: phoneSchema,
   company: Joi.string().trim().max(255).optional().allow('').messages({
     'string.max': 'Company name must not exceed 255 characters'
   }),
   address: Joi.string().trim().optional().allow(''),
-  status: Joi.string().valid('active', 'inactive').optional().default('active').messages({
-    'any.only': 'Status must be either active or inactive'
+  status: Joi.string().valid('active', 'inactive', 'prospect').optional().default('active').messages({
+    'any.only': 'Status must be active, inactive, or prospect'
   })
 });
 
@@ -24,15 +22,13 @@ const updateCustomerValidation = Joi.object({
   email: Joi.string().email().optional().messages({
     'string.email': 'Please provide a valid email'
   }),
-  phone: Joi.string().trim().max(50).optional().allow('').messages({
-    'string.max': 'Phone number must not exceed 50 characters'
-  }),
+  phone: phoneSchema,
   company: Joi.string().trim().max(255).optional().allow('').messages({
     'string.max': 'Company name must not exceed 255 characters'
   }),
   address: Joi.string().trim().optional().allow(''),
-  status: Joi.string().valid('active', 'inactive').optional().messages({
-    'any.only': 'Status must be either active or inactive'
+  status: Joi.string().valid('active', 'inactive', 'prospect').optional().messages({
+    'any.only': 'Status must be active, inactive, or prospect'
   })
 });
 

@@ -12,10 +12,14 @@ const configureServer = (app) => {
       
       const allowedOrigins = [
         'http://localhost:5173',
+        'http://localhost:5174',
         envProperties.corsOrigin
       ].filter(Boolean); // Remove any undefined values
       
-      if (allowedOrigins.includes(origin)) {
+      if (
+        allowedOrigins.includes(origin) ||
+        (envProperties.nodeEnv === 'development' && /^http:\/\/localhost(:\d+)?$/.test(origin))
+      ) {
         callback(null, true);
       } else {
         callback(new Error('Not allowed by CORS'));

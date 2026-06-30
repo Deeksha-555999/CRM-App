@@ -6,7 +6,17 @@ class LeadDao {
       const { name, email, phone, company, source, status = 'new', notes, assigned_to, created_by } = leadData;
       const [result] = await pool.execute(
         'INSERT INTO leads (name, email, phone, company, source, status, notes, assigned_to, created_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
-        [name, email, phone, company, source, status, notes, assigned_to, created_by]
+        [
+          name ?? null,
+          email ?? null,
+          phone ?? null,
+          company ?? null,
+          source ?? null,
+          status ?? 'new',
+          notes ?? null,
+          assigned_to ?? null,
+          created_by ?? null
+        ]
       );
       return result.insertId;
     } catch (error) {
@@ -78,7 +88,17 @@ class LeadDao {
       const { name, email, phone, company, source, status, notes, assigned_to } = leadData;
       const [result] = await pool.execute(
         'UPDATE leads SET name = ?, email = ?, phone = ?, company = ?, source = ?, status = ?, notes = ?, assigned_to = ? WHERE id = ?',
-        [name, email, phone, company, source, status, notes, assigned_to, id]
+        [
+          name ?? null,
+          email ?? null,
+          phone ?? null,
+          company ?? null,
+          source ?? null,
+          status ?? null,
+          notes ?? null,
+          assigned_to ?? null,
+          id
+        ]
       );
       return result.affectedRows;
     } catch (error) {

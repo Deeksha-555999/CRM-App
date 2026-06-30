@@ -6,7 +6,15 @@ class CustomerDao {
       const { name, email, phone, company, address, status = 'active', created_by } = customerData;
       const [result] = await pool.execute(
         'INSERT INTO customers (name, email, phone, company, address, status, created_by) VALUES (?, ?, ?, ?, ?, ?, ?)',
-        [name, email, phone, company, address, status, created_by]
+        [
+          name ?? null,
+          email ?? null,
+          phone ?? null,
+          company ?? null,
+          address ?? null,
+          status ?? 'active',
+          created_by ?? null
+        ]
       );
       return result.insertId;
     } catch (error) {

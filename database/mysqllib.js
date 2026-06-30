@@ -91,6 +91,17 @@ const initializeDatabase = async () => {
     `);
 
     console.log('Database tables initialized successfully');
+    
+    // Safety check to ensure 'prospect' is part of the customer status ENUM
+    try {
+      await connection.query(`
+        ALTER TABLE customers MODIFY COLUMN status ENUM('active', 'inactive', 'prospect') DEFAULT 'active'
+      `);
+      console.log('Database schema successfully checked/migrated');
+    } catch (migrateError) {
+      console.warn('Database schema migration warning:', migrateError.message);
+    }
+
     connection.release();
     return true;
   } catch (error) {

@@ -9,7 +9,7 @@ class CustomerService {
         created_by: userId
       });
 
-      return { customerId };
+      return { customerId, id: customerId };
     } catch (error) {
       if (error.code === 'ER_DUP_ENTRY') {
         throw new AppError('Customer with this email already exists', 400, 'DUPLICATE_EMAIL');

@@ -17,7 +17,7 @@ const createLeadValidation = Joi.object({
     'any.only': 'Invalid status'
   }),
   notes: Joi.string().trim().optional().allow(''),
-  assigned_to: Joi.number().integer().min(1).optional().messages({
+  assigned_to: Joi.number().integer().min(1).optional().allow(null).messages({
     'number.base': 'Assigned to must be a valid user ID',
     'number.min': 'Assigned to must be a valid user ID'
   })
@@ -44,7 +44,7 @@ const updateLeadValidation = Joi.object({
     'any.only': 'Invalid status'
   }),
   notes: Joi.string().trim().optional().allow(''),
-  assigned_to: Joi.number().integer().min(1).optional().messages({
+  assigned_to: Joi.number().integer().min(1).optional().allow(null).messages({
     'number.base': 'Assigned to must be a valid user ID',
     'number.min': 'Assigned to must be a valid user ID'
   })
