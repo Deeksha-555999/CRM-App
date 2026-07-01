@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const database = require('./index');
+const mysqlLib = require('./mysqllib');
 const PasswordService = require('../services/pwdServices');
 
 const DEFAULT_USERS = [
@@ -38,9 +38,9 @@ const upsertUser = async (pool, user) => {
 
 const seedUsers = async () => {
   try {
-    await database.initializeAllDatabases();
+    await mysqlLib.initializeDatabase();
 
-    const pool = database.mysql.getPool();
+    const pool = mysqlLib.getPool();
 
     for (const user of DEFAULT_USERS) {
       await upsertUser(pool, user);
@@ -48,17 +48,11 @@ const seedUsers = async () => {
     }
 
     console.log('User seed completed successfully.');
+    return true;
   } catch (error) {
     console.error('User seed failed:', error.message);
-    process.exitCode = 1;
-  } finally {
-    try {
-      const pool = database.mysql.getPool();
-      await pool.end();
-    } catch (closeError) {
-      // Ignore pool close errors during script shutdown.
-    }
+    throw error;
   }
 };
 
-seedUsers();
+module.exports = { seedUsers };

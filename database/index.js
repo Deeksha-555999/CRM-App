@@ -1,6 +1,6 @@
 const mysqlLib = require('./mysqllib');
 const mongoLib = require('./mongolib');
-
+const { seedUsers } = require('./seedUsers');
 
 const initializeAllDatabases = async () => {
   try {
@@ -24,6 +24,6 @@ const initializeAllDatabases = async () => {
 module.exports = {
   mysql: mysqlLib,
   mongodb: mongoLib,
-  
-  initializeAllDatabases
+  initializeAllDatabases,
+  seedUsers
 };

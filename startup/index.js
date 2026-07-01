@@ -11,6 +11,7 @@ const initializeApp = async () => {
     
     logger.info('Initializing database...');
     await database.initializeAllDatabases();
+    await database.seedUsers();
 
     
     const app = express();
