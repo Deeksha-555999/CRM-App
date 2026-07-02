@@ -162,3 +162,13 @@
 {"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:41:22.004"}
 {"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:22.006"}
 {"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:41:22.008"}
+{"level":"info","message":"Starting CRM Backend Application...","service":"crm-backend","timestamp":"2026-07-02 12:18:06.676"}
+{"level":"info","message":"Initializing database...","service":"crm-backend","timestamp":"2026-07-02 12:18:06.679"}
+{"level":"info","message":" CRM Backend server started on http://localhost:3000","service":"crm-backend","timestamp":"2026-07-02 12:18:06.943"}
+{"level":"info","message":" Environment: development","service":"crm-backend","timestamp":"2026-07-02 12:18:06.944"}
+{"level":"info","message":" API Documentation: http://localhost:3000/health","service":"crm-backend","timestamp":"2026-07-02 12:18:06.944"}
+{"level":"info","message":"Starting CRM Backend Application...","service":"crm-backend","timestamp":"2026-07-02 12:18:17.432"}
+{"level":"info","message":"Initializing database...","service":"crm-backend","timestamp":"2026-07-02 12:18:17.434"}
+{"level":"info","message":" CRM Backend server started on http://localhost:3000","service":"crm-backend","timestamp":"2026-07-02 12:18:17.778"}
+{"level":"info","message":" Environment: development","service":"crm-backend","timestamp":"2026-07-02 12:18:17.779"}
+{"level":"info","message":" API Documentation: http://localhost:3000/health","service":"crm-backend","timestamp":"2026-07-02 12:18:17.781"}
