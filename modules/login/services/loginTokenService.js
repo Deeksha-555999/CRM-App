@@ -1,5 +1,5 @@
-const JWTService = require('../../../services/jwtService');
-const LoginDao = require('../dao/loginDao');
+const JWTService = require("../../../services/jwtService");
+const LoginDao = require("../dao/loginDao");
 
 class LoginTokenService {
   static generateTokens(user) {
@@ -16,25 +16,25 @@ class LoginTokenService {
 
   static setTokenCookies(res, accessToken, refreshToken) {
     // Access token cookie
-    res.cookie('accessToken', accessToken, {
+    res.cookie("accessToken", accessToken, {
       httpOnly: false, // Allow JavaScript access for Authorization header
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 15 * 60 * 1000 // 15 minutes
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 15 * 60 * 1000, // 15 minutes
     });
 
     // Refresh token cookie (more secure)
-    res.cookie('refreshToken', refreshToken, {
+    res.cookie("refreshToken", refreshToken, {
       httpOnly: true, // Prevent JavaScript access
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
   }
 
   static clearTokenCookies(res) {
-    res.clearCookie('accessToken');
-    res.clearCookie('refreshToken');
+    res.clearCookie("accessToken");
+    res.clearCookie("refreshToken");
   }
 }
 

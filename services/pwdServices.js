@@ -1,5 +1,5 @@
-const bcrypt = require('bcryptjs');
-const envProperties = require('../properties/envProperties');
+const bcrypt = require("bcryptjs");
+const envProperties = require("../properties/envProperties");
 
 class PasswordService {
   static async hashPassword(password) {
@@ -11,8 +11,9 @@ class PasswordService {
   }
 
   static generateRandomPassword(length = 12) {
-    const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
-    let password = '';
+    const charset =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+    let password = "";
     for (let i = 0; i < length; i++) {
       const randomIndex = Math.floor(Math.random() * charset.length);
       password += charset[randomIndex];
@@ -28,26 +29,26 @@ class PasswordService {
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
     const errors = [];
-    
+
     if (password.length < minLength) {
       errors.push(`Password must be at least ${minLength} characters long`);
     }
     if (!hasUpperCase) {
-      errors.push('Password must contain at least one uppercase letter');
+      errors.push("Password must contain at least one uppercase letter");
     }
     if (!hasLowerCase) {
-      errors.push('Password must contain at least one lowercase letter');
+      errors.push("Password must contain at least one lowercase letter");
     }
     if (!hasNumbers) {
-      errors.push('Password must contain at least one number');
+      errors.push("Password must contain at least one number");
     }
     if (!hasSpecialChar) {
-      errors.push('Password must contain at least one special character');
+      errors.push("Password must contain at least one special character");
     }
 
     return {
       isValid: errors.length === 0,
-      errors
+      errors,
     };
   }
 }

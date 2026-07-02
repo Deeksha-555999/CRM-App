@@ -1,36 +1,38 @@
-const express = require('express');
-const database = require('../database');
-const configureServer = require('../services/serverService');
-const { errorHandler } = require('../middlewares');
-const { loginRoutes, registerRoutes, customerRoutes, leadRoutes, adminRoutes } = require('../modules');
-const envProperties = require('../properties/envProperties');
-const logger = require('../logging/logging');
+const express = require("express");
+const database = require("../database");
+const configureServer = require("../services/serverService");
+const { errorHandler } = require("../middlewares");
+const {
+  loginRoutes,
+  registerRoutes,
+  customerRoutes,
+  leadRoutes,
+  adminRoutes,
+} = require("../modules");
+const envProperties = require("../properties/envProperties");
+const logger = require("../logging/logging");
 
 const initializeApp = async () => {
   try {
-    
-    logger.info('Initializing database...');
+    logger.info("Initializing database...");
     await database.initializeAllDatabases();
     await database.seedUsers();
 
-    
     const app = express();
 
-   
     configureServer(app);
 
     // Register API routes
-    app.use('/api/auth', loginRoutes);
-    app.use('/api/auth', registerRoutes);
-    app.use('/api/customers', customerRoutes);
-    app.use('/api/leads', leadRoutes);
-    app.use('/api/admin', adminRoutes);
+    app.use("/api/auth", loginRoutes);
+    app.use("/api/auth", registerRoutes);
+    app.use("/api/customers", customerRoutes);
+    app.use("/api/leads", leadRoutes);
+    app.use("/api/admin", adminRoutes);
 
-   
     app.use((req, res) => {
       res.status(404).json({
         success: false,
-        message: 'Route not found'
+        message: "Route not found",
       });
     });
 
@@ -39,7 +41,7 @@ const initializeApp = async () => {
 
     return app;
   } catch (error) {
-    logger.error('Failed to initialize application:', error);
+    logger.error("Failed to initialize application:", error);
     throw error;
   }
 };
@@ -54,12 +56,12 @@ const startServer = async (app) => {
       logger.info(` API Documentation: http://localhost:${PORT}/health`);
     });
   } catch (error) {
-    logger.error('Failed to start server:', error);
+    logger.error("Failed to start server:", error);
     throw error;
   }
 };
 
 module.exports = {
   initializeApp,
-  startServer
+  startServer,
 };

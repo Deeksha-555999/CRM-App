@@ -1,24 +1,26 @@
-const Joi = require('joi');
-const { emailValidator, passwordValidator, nameValidator } = require('./joiValidators');
+const Joi = require("joi");
+const {
+  emailValidator,
+  passwordValidator,
+  nameValidator,
+} = require("./joiValidators");
 
 const registerValidation = [
-  nameValidator('name'),
+  nameValidator("name"),
   emailValidator(),
   passwordValidator(),
-  body('role')
+  body("role")
     .optional()
-    .isIn(['admin', 'user'])
-    .withMessage('Role must be either admin or user')
+    .isIn(["admin", "user"])
+    .withMessage("Role must be either admin or user"),
 ];
 
 const loginValidation = [
   emailValidator(),
-  body('password')
-    .notEmpty()
-    .withMessage('Password is required')
+  body("password").notEmpty().withMessage("Password is required"),
 ];
 
 module.exports = {
   registerValidation,
-  loginValidation
+  loginValidation,
 };

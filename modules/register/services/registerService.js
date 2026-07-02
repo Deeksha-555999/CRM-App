@@ -1,6 +1,6 @@
-const RegisterDao = require('../dao/registerDao');
-const PasswordService = require('../../../services/pwdServices');
-const { AppError } = require('../../../middlewares/errorHandler');
+const RegisterDao = require("../dao/registerDao");
+const PasswordService = require("../../../services/pwdServices");
+const { AppError } = require("../../../middlewares/errorHandler");
 
 class RegisterService {
   static async registerUser(userData) {
@@ -9,15 +9,24 @@ class RegisterService {
 
       // Check if user already exists
       const existingUser = await RegisterDao.findUserByEmail(email);
-      
+
       if (existingUser) {
-        throw new AppError('User with this email already exists', 400, 'USER_EXISTS');
+        throw new AppError(
+          "User with this email already exists",
+          400,
+          "USER_EXISTS",
+        );
       }
 
       // Validate password strength
-      const passwordValidation = PasswordService.validatePasswordStrength(password);
+      const passwordValidation =
+        PasswordService.validatePasswordStrength(password);
       if (!passwordValidation.isValid) {
-        throw new AppError(passwordValidation.errors.join(', '), 400, 'WEAK_PASSWORD');
+        throw new AppError(
+          passwordValidation.errors.join(", "),
+          400,
+          "WEAK_PASSWORD",
+        );
       }
 
       // Hash password
@@ -28,15 +37,15 @@ class RegisterService {
         name,
         email,
         password: hashedPassword,
-        role: role || 'user'
+        role: role || "user",
       });
 
       return {
         id: userId,
         name,
         email,
-        role: role || 'user',
-        is_verified: false
+        role: role || "user",
+        is_verified: false,
       };
     } catch (error) {
       throw error;

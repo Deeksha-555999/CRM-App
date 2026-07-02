@@ -1,26 +1,40 @@
-const responseConstants = require('./responseConstants');
+const responseConstants = require("./responseConstants");
 
 class Response {
-  static success(res, data = null, message = responseConstants.MESSAGES.SUCCESS, statusCode = responseConstants.STATUS.OK) {
+  static success(
+    res,
+    data = null,
+    message = responseConstants.MESSAGES.SUCCESS,
+    statusCode = responseConstants.STATUS.OK,
+  ) {
     return res.status(statusCode).json({
       success: true,
       message,
-      data
+      data,
     });
   }
 
-  static created(res, data = null, message = responseConstants.MESSAGES.CREATED) {
+  static created(
+    res,
+    data = null,
+    message = responseConstants.MESSAGES.CREATED,
+  ) {
     return res.status(responseConstants.STATUS.CREATED).json({
       success: true,
       message,
-      data
+      data,
     });
   }
 
-  static error(res, message = responseConstants.MESSAGES.INTERNAL_ERROR, statusCode = responseConstants.STATUS.INTERNAL_SERVER_ERROR, errorCode = null) {
+  static error(
+    res,
+    message = responseConstants.MESSAGES.INTERNAL_ERROR,
+    statusCode = responseConstants.STATUS.INTERNAL_SERVER_ERROR,
+    errorCode = null,
+  ) {
     const response = {
       success: false,
-      message
+      message,
     };
 
     if (errorCode) {
@@ -35,7 +49,7 @@ class Response {
       success: false,
       message: responseConstants.MESSAGES.VALIDATION_ERROR,
       errorCode: responseConstants.ERROR_CODES.VALIDATION_ERROR,
-      errors
+      errors,
     });
   }
 
@@ -43,7 +57,7 @@ class Response {
     return res.status(responseConstants.STATUS.UNAUTHORIZED).json({
       success: false,
       message,
-      errorCode: responseConstants.ERROR_CODES.AUTHENTICATION_ERROR
+      errorCode: responseConstants.ERROR_CODES.AUTHENTICATION_ERROR,
     });
   }
 
@@ -51,7 +65,7 @@ class Response {
     return res.status(responseConstants.STATUS.FORBIDDEN).json({
       success: false,
       message,
-      errorCode: responseConstants.ERROR_CODES.AUTHORIZATION_ERROR
+      errorCode: responseConstants.ERROR_CODES.AUTHORIZATION_ERROR,
     });
   }
 
@@ -59,16 +73,21 @@ class Response {
     return res.status(responseConstants.STATUS.NOT_FOUND).json({
       success: false,
       message,
-      errorCode: responseConstants.ERROR_CODES.NOT_FOUND_ERROR
+      errorCode: responseConstants.ERROR_CODES.NOT_FOUND_ERROR,
     });
   }
 
-  static paginated(res, data, pagination, message = responseConstants.MESSAGES.SUCCESS) {
+  static paginated(
+    res,
+    data,
+    pagination,
+    message = responseConstants.MESSAGES.SUCCESS,
+  ) {
     return res.status(responseConstants.STATUS.OK).json({
       success: true,
       message,
       data,
-      pagination
+      pagination,
     });
   }
 }

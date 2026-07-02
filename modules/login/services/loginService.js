@@ -1,22 +1,25 @@
-const LoginDao = require('../dao/loginDao');
-const PasswordService = require('../../../services/pwdServices');
-const { AppError } = require('../../../middlewares/errorHandler');
+const LoginDao = require("../dao/loginDao");
+const PasswordService = require("../../../services/pwdServices");
+const { AppError } = require("../../../middlewares/errorHandler");
 
 class LoginService {
   static async authenticateUser(email, password) {
     try {
       // Find user by email
       const user = await LoginDao.findUserByEmail(email);
-      
+
       if (!user) {
-        throw new AppError('Invalid credentials', 401, 'INVALID_CREDENTIALS');
+        throw new AppError("Invalid credentials", 401, "INVALID_CREDENTIALS");
       }
 
       // Verify password
-      const isPasswordValid = await PasswordService.comparePassword(password, user.password);
-      
+      const isPasswordValid = await PasswordService.comparePassword(
+        password,
+        user.password,
+      );
+
       if (!isPasswordValid) {
-        throw new AppError('Invalid credentials', 401, 'INVALID_CREDENTIALS');
+        throw new AppError("Invalid credentials", 401, "INVALID_CREDENTIALS");
       }
 
       // Remove password from user object
@@ -31,9 +34,9 @@ class LoginService {
   static async getUserProfile(userId) {
     try {
       const user = await LoginDao.findUserById(userId);
-      
+
       if (!user) {
-        throw new AppError('User not found', 404, 'USER_NOT_FOUND');
+        throw new AppError("User not found", 404, "USER_NOT_FOUND");
       }
 
       return user;
@@ -45,13 +48,13 @@ class LoginService {
   static async refreshUserToken(refreshToken) {
     try {
       if (!refreshToken) {
-        throw new AppError('Refresh token not provided', 401, 'TOKEN_MISSING');
+        throw new AppError("Refresh token not provided", 401, "TOKEN_MISSING");
       }
 
       const user = await LoginDao.findByRefreshToken(refreshToken);
-      
+
       if (!user) {
-        throw new AppError('Invalid refresh token', 401, 'INVALID_TOKEN');
+        throw new AppError("Invalid refresh token", 401, "INVALID_TOKEN");
       }
 
       return user;
@@ -80,9 +83,9 @@ class LoginService {
   static async verifyUser(userId) {
     try {
       const affectedRows = await LoginDao.verifyUser(userId);
-      
+
       if (affectedRows === 0) {
-        throw new AppError('User not found', 404, 'USER_NOT_FOUND');
+        throw new AppError("User not found", 404, "USER_NOT_FOUND");
       }
 
       return true;
@@ -95,13 +98,17 @@ class LoginService {
     try {
       // Prevent self-deletion
       if (parseInt(userId) === parseInt(requestingUserId)) {
-        throw new AppError('You cannot delete your own account', 400, 'SELF_DELETE_ERROR');
+        throw new AppError(
+          "You cannot delete your own account",
+          400,
+          "SELF_DELETE_ERROR",
+        );
       }
 
       const affectedRows = await LoginDao.deleteUser(userId);
-      
+
       if (affectedRows === 0) {
-        throw new AppError('User not found', 404, 'USER_NOT_FOUND');
+        throw new AppError("User not found", 404, "USER_NOT_FOUND");
       }
 
       return true;

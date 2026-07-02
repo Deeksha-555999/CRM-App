@@ -1,6 +1,6 @@
-const LeadDao = require('../dao/leadDao');
-const { AppError } = require('../../../middlewares/errorHandler');
-const pool = require('../../../database/mysqllib').getPool();
+const LeadDao = require("../dao/leadDao");
+const { AppError } = require("../../../middlewares/errorHandler");
+const pool = require("../../../database/mysqllib").getPool();
 
 class LeadService {
   static async normalizeLeadData(leadData) {
@@ -9,21 +9,26 @@ class LeadService {
     if (
       normalizedLeadData.assigned_to === undefined ||
       normalizedLeadData.assigned_to === null ||
-      normalizedLeadData.assigned_to === '' ||
-      normalizedLeadData.assigned_to === 'null'
+      normalizedLeadData.assigned_to === "" ||
+      normalizedLeadData.assigned_to === "null"
     ) {
       normalizedLeadData.assigned_to = null;
       return normalizedLeadData;
     }
 
-    const parsedAssignedTo = Number.parseInt(normalizedLeadData.assigned_to, 10);
+    const parsedAssignedTo = Number.parseInt(
+      normalizedLeadData.assigned_to,
+      10,
+    );
 
     if (!Number.isInteger(parsedAssignedTo) || parsedAssignedTo <= 0) {
       normalizedLeadData.assigned_to = null;
       return normalizedLeadData;
     }
 
-    const [rows] = await pool.execute('SELECT id FROM users WHERE id = ?', [parsedAssignedTo]);
+    const [rows] = await pool.execute("SELECT id FROM users WHERE id = ?", [
+      parsedAssignedTo,
+    ]);
     normalizedLeadData.assigned_to = rows.length ? parsedAssignedTo : null;
 
     return normalizedLeadData;
@@ -33,7 +38,7 @@ class LeadService {
     try {
       const normalizedLeadData = await this.normalizeLeadData({
         ...leadData,
-        created_by: userId
+        created_by: userId,
       });
       const leadId = await LeadDao.create(normalizedLeadData);
 
@@ -54,9 +59,9 @@ class LeadService {
   static async getLeadById(id) {
     try {
       const lead = await LeadDao.findById(id);
-      
+
       if (!lead) {
-        throw new AppError('Lead not found', 404, 'LEAD_NOT_FOUND');
+        throw new AppError("Lead not found", 404, "LEAD_NOT_FOUND");
       }
 
       return lead;
@@ -71,7 +76,7 @@ class LeadService {
       const affectedRows = await LeadDao.update(id, normalizedLeadData);
 
       if (affectedRows === 0) {
-        throw new AppError('Lead not found', 404, 'LEAD_NOT_FOUND');
+        throw new AppError("Lead not found", 404, "LEAD_NOT_FOUND");
       }
 
       return true;
@@ -85,7 +90,7 @@ class LeadService {
       const affectedRows = await LeadDao.delete(id);
 
       if (affectedRows === 0) {
-        throw new AppError('Lead not found', 404, 'LEAD_NOT_FOUND');
+        throw new AppError("Lead not found", 404, "LEAD_NOT_FOUND");
       }
 
       return true;

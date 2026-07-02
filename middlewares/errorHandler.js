@@ -1,4 +1,4 @@
-const logger = require('../logging/logging');
+const logger = require("../logging/logging");
 
 class AppError extends Error {
   constructor(message, statusCode, errorCode = null) {
@@ -12,20 +12,20 @@ class AppError extends Error {
 
 const errorHandler = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
-  err.message = err.message || 'Internal Server Error';
+  err.message = err.message || "Internal Server Error";
 
   // Log error
-  logger.error('Error occurred:', {
+  logger.error("Error occurred:", {
     message: err.message,
     statusCode: err.statusCode,
     stack: err.stack,
     url: req.originalUrl,
-    method: req.method
+    method: req.method,
   });
 
   const errorResponse = {
     success: false,
-    message: err.message
+    message: err.message,
   };
 
   if (err.errorCode) {
@@ -33,7 +33,7 @@ const errorHandler = (err, req, res, next) => {
   }
 
   // Include stack trace in development
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === "development") {
     errorResponse.stack = err.stack;
   }
 
@@ -49,5 +49,5 @@ const asyncHandler = (fn) => {
 module.exports = {
   errorHandler,
   asyncHandler,
-  AppError
+  AppError,
 };
