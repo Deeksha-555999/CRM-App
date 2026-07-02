@@ -63,3 +63,102 @@
 {"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:05:35.205"}
 {"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:05:35.210"}
 {"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:05:35.213"}
+{"level":"info","message":"Starting CRM Backend Application...","service":"crm-backend","timestamp":"2026-07-02 11:36:56.283"}
+{"level":"info","message":"Initializing database...","service":"crm-backend","timestamp":"2026-07-02 11:36:56.285"}
+{"level":"info","message":" CRM Backend server started on http://localhost:3000","service":"crm-backend","timestamp":"2026-07-02 11:36:56.578"}
+{"level":"info","message":" Environment: development","service":"crm-backend","timestamp":"2026-07-02 11:36:56.578"}
+{"level":"info","message":" API Documentation: http://localhost:3000/health","service":"crm-backend","timestamp":"2026-07-02 11:36:56.579"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:11.044"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:37:11.059"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:11.066"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:11.075"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:37:11.080"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:11.087"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:37:11.093"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:11.100"}
+{"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:37:11.102"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:37:11.105"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:11.110"}
+{"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:37:11.117"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:11.123"}
+{"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:37:11.126"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:11.131"}
+{"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:37:11.135"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:25.945"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:37:25.950"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:25.958"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:37:25.963"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:25.990"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:25.995"}
+{"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:37:26.001"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:26.006"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:37:26.010"}
+{"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:37:26.012"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:26.017"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:26.025"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:37:26.029"}
+{"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:37:26.033"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:37:26.041"}
+{"api":"getAllLeads","count":2,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:37:26.048"}
+{"api":"createLead","apiId":"6ebd8636-bed5-4820-8fd1-cdb85a5742d4","email":"deeksha92@gmail.com","level":"info","message":"Create lead request","module":"lead","name":"Deeksha Dhiman","service":"crm-backend","timestamp":"2026-07-02 11:38:36.953"}
+{"api":"createLead","apiId":"6ebd8636-bed5-4820-8fd1-cdb85a5742d4","leadId":37,"level":"info","message":"Lead created successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:38:36.970"}
+{"api":"getAllLeads","level":"info","limit":"10","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:38:38.500"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:38:38.516"}
+{"api":"getAllLeads","level":"info","limit":"10","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:38:38.524"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:38:38.532"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:38:47.742"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:38:47.751"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:38:47.763"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:38:47.778"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:38:47.783"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:38:47.791"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:38:47.803"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:38:47.809"}
+{"api":"getAllUsers","level":"info","limit":"10","message":"Get all users request","module":"admin","page":"1","search":"","service":"crm-backend","status":"all","timestamp":"2026-07-02 11:38:58.611"}
+{"api":"getUnverifiedUsers","level":"info","message":"Get unverified users request","module":"admin","service":"crm-backend","timestamp":"2026-07-02 11:38:58.617"}
+{"api":"getUnverifiedUsers","count":0,"level":"info","message":"Unverified users fetched successfully","module":"admin","service":"crm-backend","timestamp":"2026-07-02 11:38:58.627"}
+{"api":"getUnverifiedUsers","level":"info","message":"Get unverified users request","module":"admin","service":"crm-backend","timestamp":"2026-07-02 11:38:58.634"}
+{"api":"getAllUsers","count":2,"level":"info","message":"Users fetched successfully","module":"admin","service":"crm-backend","timestamp":"2026-07-02 11:38:58.637","total":2}
+{"api":"getUnverifiedUsers","count":0,"level":"info","message":"Unverified users fetched successfully","module":"admin","service":"crm-backend","timestamp":"2026-07-02 11:38:58.640"}
+{"api":"getAllUsers","level":"info","limit":"10","message":"Get all users request","module":"admin","page":"1","search":"","service":"crm-backend","status":"all","timestamp":"2026-07-02 11:38:58.647"}
+{"api":"getAllUsers","count":2,"level":"info","message":"Users fetched successfully","module":"admin","service":"crm-backend","timestamp":"2026-07-02 11:38:58.654","total":2}
+{"api":"getAllLeads","level":"info","limit":"10","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:03.803"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:39:03.811"}
+{"api":"getAllLeads","level":"info","limit":"10","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:03.819"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:39:03.824"}
+{"api":"getAllCustomers","level":"info","limit":"10","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:36.739"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:39:36.747"}
+{"api":"getAllCustomers","level":"info","limit":"10","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:36.760"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:39:36.782"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:51.152"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:39:51.157"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:51.168"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:51.186"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:39:51.192"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:51.206"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:39:51.209"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:51.223"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:39:51.225"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:51.236"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:39:51.239"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:51.246"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:39:51.248"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:39:51.251"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:39:51.259"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:39:51.263"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:21.974"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:41:21.976"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:21.979"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:41:21.981"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:21.983"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:21.985"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:41:21.988"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:41:21.989"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:21.993"}
+{"api":"getAllCustomers","level":"info","limit":"1000","message":"Get all customers request","module":"customer","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:21.996"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:41:21.997"}
+{"api":"getAllCustomers","count":2,"level":"info","message":"Customers retrieved successfully","module":"customer","service":"crm-backend","timestamp":"2026-07-02 11:41:21.998"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:22.001"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:41:22.004"}
+{"api":"getAllLeads","level":"info","limit":"1000","message":"Get all leads request","module":"lead","page":"1","service":"crm-backend","timestamp":"2026-07-02 11:41:22.006"}
+{"api":"getAllLeads","count":3,"level":"info","message":"Leads retrieved successfully","module":"lead","service":"crm-backend","timestamp":"2026-07-02 11:41:22.008"}
