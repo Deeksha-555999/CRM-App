@@ -1,21 +1,21 @@
-const mongoose = require('mongoose');
-const dbConfig = require('./dbProperties');
+const mongoose = require("mongoose");
+const dbConfig = require("./dbProperties");
 
 let isConnected = false;
 
 const connectMongoDB = async () => {
   if (isConnected) {
-    console.log('✅ MongoDB already connected');
+    console.log("✅ MongoDB already connected");
     return mongoose.connection;
   }
 
   try {
     await mongoose.connect(dbConfig.mongodb.uri, dbConfig.mongodb.options);
     isConnected = true;
-    console.log('✅ MongoDB connected successfully');
+    console.log("✅ MongoDB connected successfully");
     return mongoose.connection;
   } catch (error) {
-    console.error('❌ MongoDB connection failed:', error.message);
+    console.error("❌ MongoDB connection failed:", error.message);
     throw error;
   }
 };
@@ -28,9 +28,9 @@ const disconnectMongoDB = async () => {
   try {
     await mongoose.disconnect();
     isConnected = false;
-    console.log('✅ MongoDB disconnected successfully');
+    console.log("✅ MongoDB disconnected successfully");
   } catch (error) {
-    console.error('❌ MongoDB disconnection failed:', error.message);
+    console.error("❌ MongoDB disconnection failed:", error.message);
     throw error;
   }
 };
@@ -38,5 +38,5 @@ const disconnectMongoDB = async () => {
 module.exports = {
   connectMongoDB,
   disconnectMongoDB,
-  mongoose
+  mongoose,
 };

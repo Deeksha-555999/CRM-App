@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ quiet: true });
 const { initializeApp, startServer } = require('./startup');
 const logger = require('./logging/logging');
 
